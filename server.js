@@ -14,6 +14,22 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne= {
+    title: 'Article One',
+    heading: 'Article One',
+    content:`    <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmkninikniknhikhihishxizhuh
+    smsnxsinxisxnsnxox</p>
+    
+        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmkninikniknhikhihishxizhuh
+    smsnxsinxisxnsnxox</p>
+    
+        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmkninikniknhikhihishxizhuh
+    smsnxsinxisxnsnxox</p>`
+};
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
