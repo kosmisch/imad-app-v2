@@ -8,8 +8,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-
-var articleOne= {
+var articles={
+     'article-one': {
     title: 'Article One',
     heading: 'Article One',
     content:`    <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
@@ -23,12 +23,33 @@ var articleOne= {
         <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
     ;lkkmkninikniknhikhihishxizhuh
     smsnxsinxisxnsnxox</p>`
+},
+     'article-two':{title: 'Article Two',
+    heading: 'Article Two',
+    content:`    <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmkninikniknhikhihishxizhuh
+    smsnxsinxisxnsnxox</p>
+    
+        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmkninikniknhikhihishxizhuh
+    smsnxsinxisxnsnxox</p>`},
+     'article-three':{title: 'Article Three',
+    heading: 'Article Three',
+    content:`    <p>avhxvahxaxbxizhuh
+    smsnxsinxisxnsnxox</p>
+    
+        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmkninxizhuh
+    smsnxsinxisxnsnxox</p>
+    
+        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmknihuh
+    smsnxsinxisxnsnxox</p>`}
 };
 function createTemplate (data){
  var title=data.title;
  var heading=data.heading;
  var content=data.content;
-
 var htmlTemplate=`<html>
 <head>
     <title> ${title}</title>
@@ -58,8 +79,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req,res){
- res.send(createTemplate(articleOne));
+app.get('/:articleName', function (req,res){
+    // articleName==articleOne
+    var articleName= req.params.articleName;
+ res.send(createTemplate(articles[articleName]));
 });
 
 
