@@ -29,10 +29,14 @@ var articleOne= {
     ;lkkmkninikniknhikhihishxizhuh
     smsnxsinxisxnsnxox</p>`
 };
+function createTemplate (data){
+ var title=data.title;
+ var heading=data.heading;
+ var content=data.content;
 
 varhtmlTemplate=`<html>
 <head>
-    <title> Article one</title>
+    <title> ${title}</title>
     <link href="/ui/style.css" rel="stylesheet" /> 
 </head>
 <body>
@@ -42,29 +46,25 @@ varhtmlTemplate=`<html>
   <a href="/"> Home</a> 
 </div>
 
-<h2>Article one</h2>
+<h2>${heading}</h2>
 <div>
-    <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmkninikniknhikhihishxizhuh
-    smsnxsinxisxnsnxox</p>
-    
-        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmkninikniknhikhihishxizhuh
-    smsnxsinxisxnsnxox</p>
-    
-        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmkninikniknhikhihishxizhuh
-    smsnxsinxisxnsnxox</p>
+  ${content}
     
 </div>
 </div>
 </body>
 
 </html>`;
+return htmlTemplate;
+}
 
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+app.get('/article-one', fuction (req,res){
+ res.send(createTemplate(articleOne));
 });
 
 var pool=new Pool(config);
