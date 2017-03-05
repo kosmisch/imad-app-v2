@@ -30,6 +30,39 @@ var articleOne= {
     smsnxsinxisxnsnxox</p>`
 };
 
+varhtmlTemplate=`<html>
+<head>
+    <title> Article one</title>
+    <link href="/ui/style.css" rel="stylesheet" /> 
+</head>
+<body>
+    <div class="container">
+        
+    <div>
+  <a href="/"> Home</a> 
+</div>
+
+<h2>Article one</h2>
+<div>
+    <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmkninikniknhikhihishxizhuh
+    smsnxsinxisxnsnxox</p>
+    
+        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmkninikniknhikhihishxizhuh
+    smsnxsinxisxnsnxox</p>
+    
+        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
+    ;lkkmkninikniknhikhihishxizhuh
+    smsnxsinxisxnsnxox</p>
+    
+</div>
+</div>
+</body>
+
+</html>`;
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
