@@ -17,44 +17,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles={
-     'article-one': {
-    title: 'Article One',
-    heading: 'Article One',
-    content:`    <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmkninikniknhikhihishxizhuh
-    smsnxsinxisxnsnxox</p>
-    
-        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmkninikniknhikhihishxizhuh
-    smsnxsinxisxnsnxox</p>
-    
-        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmkninikniknhikhihishxizhuh
-    smsnxsinxisxnsnxox</p> `
-},
-     'article-two':{title: 'Article Two',
-    heading: 'Article Two',
-    content:`    <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmkninikniknhikhihishxizhuh
-    smsnxsinxisxnsnxox</p>
-    
-        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmkninikniknhikhihishxizhuh
-    smsnxsinxisxnsnxox</p>`},
-     'article-three':{title: 'Article Three',
-    heading: 'Article Three',
-    content:`    <p>avhxvahxaxbxizhuh
-    smsnxsinxisxnsnxox</p>
-    
-        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmkninxizhuh
-    smsnxsinxisxnsnxox</p>
-    
-        <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
-    ;lkkmknihuh
-    smsnxsinxisxnsnxox</p>`}
-};
+
 function createTemplate (data){
  var title=data.title;
  var heading=data.heading;
