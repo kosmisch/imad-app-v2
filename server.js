@@ -31,7 +31,7 @@ var articles={
     
         <p>avhxvahxaxbajxbajxmzzknjnjbjbjb
     ;lkkmkninikniknhikhihishxizhuh
-    smsnxsinxisxnsnxox</p>`
+    smsnxsinxisxnsnxox</p> `
 },
      'article-two':{title: 'Article Two',
     heading: 'Article Two',
