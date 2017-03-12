@@ -39,6 +39,7 @@ var htmlTemplate=`<html>
   ${content}
     
 </div>
+<div> ${image} </div>
 </div>
 </body>
 
@@ -89,14 +90,14 @@ pool.query("SELECT * FROM articles WHERE title=$1",[req.params.articleName],func
 });
 
 
-app.get('/profile/image', function(req, res){
+//app.get('/profile/image', function(req, res){
 
      //some code to find the path to the image associated with some user
 
-     var img = fs.readFileSync('path to file');
-     res.writeHead(200, {'Content-Type': 'image/gif' });
-     res.end(img, 'binary');
-})
+    // var img = fs.readFileSync('path to file');
+    // res.writeHead(200, {'Content-Type': 'image/gif' });
+    // res.end(img, 'binary');
+//})
 
 
 
