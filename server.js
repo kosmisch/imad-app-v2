@@ -92,7 +92,7 @@ pool.query("SELECT * FROM articles WHERE title=$1",[req.params.articleName],func
     {
         if(result.rows.length===0)
         {res.status(404).send('Article not found');
-    }
+        }
     else
     {
         var articleData=result.rows[0];
@@ -109,7 +109,7 @@ pool.query("SELECT * FROM articles WHERE title=$1",[req.params.articleName],func
 
     // var img = fs.readFileSync('path to file');
     // res.writeHead(200, {'Content-Type': 'image/gif' });
-    // res.end(img, 'binary');
+    // res.end(img,binary);
 //})
 
 
