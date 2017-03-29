@@ -43,7 +43,7 @@ var htmlTemplate=`<html>
 
 </body>
 
-</html>`;
+</html>
 return htmlTemplate;
 }
 
