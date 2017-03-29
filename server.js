@@ -37,12 +37,10 @@ var htmlTemplate=`<html>
 <h2>${heading}</h2>
 <div>
   ${content}
-    
-</div>
+    </div>
+ 
  </div>
-
 </body>
-
 </html>
 return htmlTemplate;
 }
