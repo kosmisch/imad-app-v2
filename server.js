@@ -35,8 +35,9 @@ var htmlTemplate=`<html>
 </div>
 
 <h2>${heading}</h2>
-<div>
-  ${content}
+
+    <div>
+    ${content}
     </div>
  
  </div>
