@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
+var fs = require('fs');
 
 var config={
     user:'kosmisch',
@@ -35,7 +36,7 @@ var htmlTemplate=`<html>
 </div>
 
 <h2>${heading}</h2>
-
+<div> ${image}</div>
     <div>
     ${content}
     </div>
